@@ -28,20 +28,20 @@ services:
     image: ghcr.io/umati/umatigateway:develop
     container_name: umatigateway
     ports:
-      - "127.0.0.1:7079:7079"
+      - "127.0.0.1:8080:8080"
     volumes:
       - ./umatiGateway.xml:/app/umatiGatewayConfig.xml
 ```
 
 ### GUI
 
-Web-based interface is accessible on port 8080 by default. There the connection settings can be modified and applied on the fly, making it useful for initial setup and debugging.
+Web-based interface is accessible on port 8080 by default. There the connection settings can be modified and applied on the fly, making it useful for initial setup and debugging. To prevent exposing the port when running the binary, replace `0.0.0.0` with `127.0.0.1` in the `WebUI` section of the configuration file.
 
 > When running the gateway on a remote machine you can create a tunnel to it via SSH:
 >
-> `ssh -L 7079:localhost:7079 user@remote-server`
-
-The interface will be then available at [http://localhost:7079](http://localhost:7079).
+> `ssh -L 8080:localhost:8080 user@remote-server`
+>
+> The interface will be then available at [http://localhost:8080](http://localhost:8080).
 
 ## License
 

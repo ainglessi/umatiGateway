@@ -28,7 +28,7 @@ services:
     image: ghcr.io/umati/umatigateway:develop
     container_name: umatigateway
     ports:
-      - "127.0.0.1:7079:7079"
+      - "127.0.0.1:8080:8080"
     volumes:
       - ./umatiGatewayConfig.xml:/app/umatiGatewayConfig.xml
 ```
@@ -69,7 +69,7 @@ The default configuration file looks like:
 <?xml version="1.0" encoding="utf-8"?>
 <umatiGatewayConfig version="2.0" logLevel="Debug">
   <StartConfiguration startWebUI="True" startOPCConnection="False" startMqttProvider="False" startPubSubProvider="False"/>
-  <WebUI url="http://127.0.0.1:7079"></WebUI>
+  <WebUI url="http://127.0.0.1:8080"></WebUI>
   <!-- <OPCConnection serverendpoint="opc.tcp://opcua.umati.app:4840" authentication="None" user ="" password="" ReadExtraLibs="False"/> -->
   <OPCConnection serverendpoint="opc.tcp://localhost:4840" authentication="None" user ="" password="" ReadExtraLibs="False"/>
   <MqttProvider serverendpoint="wss://umati.app/ws" user="" password="" clientId="company/client" prefix="umati/v2" includeStructuredComponents="False" publishInterval="5000">
