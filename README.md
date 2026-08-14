@@ -29,6 +29,7 @@ services:
     container_name: umatigateway
     ports:
       - "127.0.0.1:8080:8080"
+      - "[::1]:8080:8080"
     volumes:
       - ./umatiGateway.xml:/app/umatiGatewayConfig.xml
 ```

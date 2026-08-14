@@ -29,6 +29,7 @@ services:
     container_name: umatigateway
     ports:
       - "127.0.0.1:8080:8080"
+      - "[::1]:8080:8080"
     volumes:
       - ./umatiGatewayConfig.xml:/app/umatiGatewayConfig.xml
 ```
@@ -108,7 +109,7 @@ The default configuration file looks like:
 | →→startMqttProvider                    | Indicates if the MQTT Provider should be started when gateway starts.             | True \| False                                                       |
 | →→startPubSubProvider                  | Indicates if the PubSub Provider should be started when gateway starts.           | True \| False                                                       |
 | →**WebUI**                             | Tag configuring the Web Ui of the gateway.                                        | -                                                                   |
-| →→`url`                                | Sets the URL for the Web Ui.                                                      | e.g., `http://localhost:8080` or `http://127.0.0.1:80`                 |
+| →→`url`                                | Sets the URL for the Web Ui.                                                      | e.g., `http://localhost:8080`, `http://127.0.0.1:80` or `http://[::1]:8080` |
 | →**OPCConnection**                     | Tag Configuring the connection to the OPC Server.                                 | -                                                                   |
 | →→serverendpoint                       | Host address of the OPC Ua Server.                                                | e.g., `opc.tcp://localhost:4840`                                    |
 | →→authentication                       | Reserved for future use.                                                          | None                                                                |
