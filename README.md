@@ -8,7 +8,7 @@ umati Gateway connects to an OPC UA server, subscribes to values from one or mor
 
 ## Getting Started
 
-For a more detailed description about the umatiGateway please take a look at the [User Manual](/docs/user/usage.md) .
+For a more detailed description about the umatiGateway please take a look at the [User Manual](/docs/user/usage.md).
 
 ### Running in container
 
@@ -36,7 +36,7 @@ services:
 
 ### GUI
 
-Web-based interface is accessible on port 8080 by default. There the connection settings can be modified and applied on the fly, making it useful for initial setup and debugging. To prevent exposing the port when running the binary, replace `0.0.0.0` with `127.0.0.1` in the `WebUI` section of the configuration file.
+Web-based interface is accessible on port 8080 by default. There the connection settings can be modified and applied on the fly, making it useful for initial setup and debugging. To use Web UI when running the gateway as a container, replace `127.0.0.1` with `0.0.0.0` (or `[::]` for IPv6) in the `WebUI` section of `umatiGatewayConfig.xml`.
 
 > When running the gateway on a remote machine you can create a tunnel to it via SSH:
 >
