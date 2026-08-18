@@ -73,7 +73,7 @@ The default configuration file looks like:
 <umatiGatewayConfig version="2.0" logLevel="Debug">
   <StartConfiguration startWebUI="True" startOPCConnection="False" startMqttProvider="False" startPubSubProvider="False"/>
   <WebUI url="http://127.0.0.1:8080"></WebUI>
-	<!-- <WebUI url="http://0.0.0.0:8080"></WebUI> -->
+  <!-- <WebUI url="http://0.0.0.0:8080"></WebUI> -->
   <!-- <OPCConnection serverendpoint="opc.tcp://opcua.umati.app:4840" authentication="None" user ="" password="" ReadExtraLibs="False"/> -->
   <OPCConnection serverendpoint="opc.tcp://localhost:4840" authentication="None" user ="" password="" ReadExtraLibs="False"/>
   <MqttProvider serverendpoint="wss://umati.app/ws" user="" password="" clientId="company/client" prefix="umati/v2" includeStructuredComponents="False" publishInterval="5000">
